@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How It Works | Buildora Safe-Shield™ Architectural Escrow</title>
+  <meta name="description" content="Learn how Buildora eliminates financial risk by taking on project guarantees, providing independent certified budgets, and keeping payments in escrow.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              DEFAULT: '#C5A880',
+              hover: '#D8BD97',
+              dark: '#A68A62'
+            },
+            charcoal: {
+              900: '#0F1217',
+              950: '#0B0E14'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-charcoal-950 text-gray-200 bg-blueprint">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-gold to-gold-dark flex items-center justify-center shadow-lg group-hover:rotate-6 transition-transform">
+            <svg class="w-6 h-6 text-charcoal-950" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <div>
+            <span class="font-serif text-2xl font-bold tracking-wider text-white">BUILDORA</span>
+            <span class="block text-[9px] uppercase tracking-widest text-gold font-semibold">Architectural Escrow</span>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="index.html" data-nav="index.html" class="text-gray-300 hover:text-gold transition-colors">Home</a>
+          <a href="how-it-works.html" data-nav="how-it-works.html" class="text-gold font-semibold">How It Works</a>
+          <a href="architects.html" data-nav="architects.html" class="text-gray-300 hover:text-gold transition-colors">Architects</a>
+          <a href="projects.html" data-nav="projects.html" class="text-gray-300 hover:text-gold transition-colors">Designs & Portfolio</a>
+          <a href="cost-calculator.html" data-nav="cost-calculator.html" class="text-gray-300 hover:text-gold transition-colors">Budget Calculator</a>
+          <a href="about.html" data-nav="about.html" class="text-gray-300 hover:text-gold transition-colors">About</a>
+        </nav>
+
+        <div class="hidden lg:flex items-center gap-4">
+          <a href="post-project.html" class="btn-gold px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2">
+            <span>Commission Project</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </a>
+        </div>
+
+        <div class="md:hidden flex items-center gap-3">
+          <button id="mobile-menu-btn" class="p-2 text-gray-300 hover:text-white rounded-lg bg-white/5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-lg flex justify-end">
+    <div class="w-full max-w-sm bg-charcoal-900 h-full p-6 flex flex-col justify-between border-l border-gold/20">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-white/10">
+          <span class="font-serif text-xl font-bold text-white">BUILDORA</span>
+          <button id="close-mobile-menu" class="p-2 text-gray-400 hover:text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+        <nav class="flex flex-col gap-4 mt-6 text-base font-medium">
+          <a href="index.html" class="py-2 text-gray-300 hover:text-gold border-b border-white/5">Home</a>
+          <a href="how-it-works.html" class="py-2 text-gold border-b border-white/5">How It Works</a>
+          <a href="architects.html" class="py-2 text-gray-300 hover:text-gold border-b border-white/5">Architects</a>
+          <a href="projects.html" class="py-2 text-gray-300 hover:text-gold border-b border-white/5">Designs & Portfolio</a>
+          <a href="cost-calculator.html" class="py-2 text-gray-300 hover:text-gold border-b border-white/5">Budget Calculator</a>
+          <a href="about.html" class="py-2 text-gray-300 hover:text-gold border-b border-white/5">About</a>
+        </nav>
+      </div>
+      <a href="post-project.html" class="w-full btn-gold py-3 rounded-xl text-center text-xs font-bold uppercase tracking-wider block">
+        Start Your Project
+      </a>
+    </div>
+  </div>
+
+  <!-- Hero Banner -->
+  <section class="py-20 relative border-b border-gold/15 bg-charcoal-900/50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="px-3.5 py-1 bg-gold/10 text-gold border border-gold/30 rounded-full text-xs font-semibold uppercase tracking-widest">
+        The Buildora Protocol
+      </span>
+      <h1 class="text-4xl sm:text-6xl font-serif font-bold text-white mt-4 mb-6">
+        How We Protect You From Financial & Construction Risk
+      </h1>
+      <p class="text-sm sm:text-base text-gray-300 leading-relaxed font-light">
+        In traditional home building, the client bears all the risk. On Buildora, clients and architects brainstorm freely, while Buildora acts as the impartial guarantor, certified budget auditor, and milestone escrow holder.
+      </p>
+    </div>
+  </section>
+
+  <!-- Detailed 4-Phase Breakdown -->
+  <section class="py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="space-y-16">
+      
+      <!-- Phase 1 -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-6 space-y-4">
+          <div class="flex items-center gap-3">
+            <span class="w-10 h-10 rounded-xl bg-gold text-black flex items-center justify-center font-serif font-bold text-lg">01</span>
+            <span class="text-xs uppercase tracking-widest text-gold font-bold">Phase 1: Creative Dialogue</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-white">Direct Concept Discussions With No Strings Attached</h2>
+          <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+            You browse through verified architects, review their portfolio, and schedule free design concept sessions. You share your land boundaries, zoning rules, lifestyle wishes, and photos of styles you love.
+          </p>
+          <div class="p-4 bg-black/40 rounded-xl border border-white/10 text-xs text-gray-300 space-y-2">
+            <div class="flex items-center gap-2 text-emerald-400 font-semibold">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              What is strictly prohibited:
+            </div>
+            <p>Architects on Buildora cannot demand private advance deposits, side retainers, or direct bank transfers. All discussions remain purely conceptual until Buildora audits the project.</p>
+          </div>
+        </div>
+        <div class="lg:col-span-6">
+          <div class="rounded-2xl overflow-hidden border border-gold/20 shadow-2xl h-80 img-zoom-container">
+            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1000&q=80" alt="Architect Collaboration" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+
+      <!-- Phase 2 -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center lg:flex-row-reverse">
+        <div class="lg:col-span-6 lg:order-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <span class="w-10 h-10 rounded-xl bg-gold text-black flex items-center justify-center font-serif font-bold text-lg">02</span>
+            <span class="text-xs uppercase tracking-widest text-gold font-bold">Phase 2: Independent Audit</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-white">Buildora Translates Blueprints Into a Guaranteed Budget</h2>
+          <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+            When the architect drafts the schematic layout, it is routed into the Buildora Technical Desk. Our licensed Quantity Surveyors (QS) and structural specialists conduct a comprehensive structural and bill-of-quantities (BOQ) audit.
+          </p>
+          <div class="p-4 bg-black/40 rounded-xl border border-white/10 text-xs text-gray-300 space-y-2">
+            <div class="flex items-center gap-2 text-gold font-semibold">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+              What we audit:
+            </div>
+            <p>Soil and foundation requirements, structural steel, concrete grades, MEP (electrical & plumbing), window curtain wall engineering, and accurate market labor rates.</p>
+          </div>
+        </div>
+        <div class="lg:col-span-6 lg:order-1">
+          <div class="rounded-2xl overflow-hidden border border-gold/20 shadow-2xl h-80 img-zoom-container">
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=80" alt="Quantity Surveying and Blueprints" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+
+      <!-- Phase 3 -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-6 space-y-4">
+          <div class="flex items-center gap-3">
+            <span class="w-10 h-10 rounded-xl bg-gold text-black flex items-center justify-center font-serif font-bold text-lg">03</span>
+            <span class="text-xs uppercase tracking-widest text-gold font-bold">Phase 3: The Offer & Choice</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-white">You Review the Locked Budget — Deal Only If You Are Delighted</h2>
+          <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+            Buildora presents you with the final verified dossier. It contains an itemized cost projection, guaranteed completion timeline, and material standards.
+          </p>
+          <div class="p-4 bg-black/40 rounded-xl border border-white/10 text-xs text-gray-300 space-y-2">
+            <div class="flex items-center gap-2 text-emerald-400 font-semibold">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              The Buildora Promise:
+            </div>
+            <p>If you like the budget and timeline, you approve it and Buildora formalizes the contract. If you do not approve, you walk away completely free of debt or legal commitments.</p>
+          </div>
+        </div>
+        <div class="lg:col-span-6">
+          <div class="rounded-2xl overflow-hidden border border-gold/20 shadow-2xl h-80 img-zoom-container">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80" alt="Contract Formalization" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+
+      <!-- Phase 4 -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center lg:flex-row-reverse">
+        <div class="lg:col-span-6 lg:order-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <span class="w-10 h-10 rounded-xl bg-gold text-black flex items-center justify-center font-serif font-bold text-lg">04</span>
+            <span class="text-xs uppercase tracking-widest text-gold font-bold">Phase 4: Milestone Escrow</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-white">Funds Stay Protected in Escrow, Released Only on Quality Pass</h2>
+          <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+            Your payments are deposited into a secure Buildora Escrow Trust Account. As construction reaches key milestones (Foundation, Superstructure, Roofing, Finishing), Buildora engineers inspect the site in person before a single rupee is released.
+          </p>
+          <div class="p-4 bg-emerald-950/30 rounded-xl border border-emerald-500/30 text-xs text-gray-300 space-y-2">
+            <div class="flex items-center gap-2 text-emerald-400 font-semibold">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+              Zero Desertion Risk:
+            </div>
+            <p>If a contractor or architect defaults, Buildora's reserve fund steps in and our vetted backup teams complete the milestone with zero extra charge to you.</p>
+          </div>
+        </div>
+        <div class="lg:col-span-6 lg:order-1">
+          <div class="rounded-2xl overflow-hidden border border-gold/20 shadow-2xl h-80 img-zoom-container">
+            <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?auto=format&fit=crop&w=1000&q=80" alt="Construction Site Inspection" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FAQ Accordion Section -->
+  <section class="py-24 bg-charcoal-900/50 border-t border-gold/15">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-16">
+        <span class="text-xs uppercase tracking-widest text-gold font-semibold">Clear Answers</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mt-1">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="space-y-4">
+        
+        <details class="glass-panel rounded-2xl p-5 border border-white/10 group cursor-pointer" open>
+          <summary class="flex justify-between items-center text-sm font-bold text-white group-hover:text-gold list-none">
+            <span>Why does Buildora strictly forbid direct payments to architects?</span>
+            <span class="text-gold font-bold ml-2">+</span>
+          </summary>
+          <p class="text-xs text-gray-300 leading-relaxed mt-3 pt-3 border-t border-white/5">
+            Direct payments expose clients to immense vulnerabilities: architects might take substantial advances without delivering actionable engineering drawings, or they may design aesthetic structures that contractors quote 2x more to build. By inserting Buildora as the escrow intermediary and budget auditor, both parties are protected.
+          </p>
+        </details>
+
+        <details class="glass-panel rounded-2xl p-5 border border-white/10 group cursor-pointer">
+          <summary class="flex justify-between items-center text-sm font-bold text-white group-hover:text-gold list-none">
+            <span>What if I don't like the budget Buildora calculates?</span>
+            <span class="text-gold font-bold ml-2">+</span>
+          </summary>
+          <p class="text-xs text-gray-300 leading-relaxed mt-3 pt-3 border-t border-white/5">
+            You are under zero obligation. You can ask the architect to simplify the design (value engineering) to fit a smaller budget, or you can walk away without any penalty.
+          </p>
+        </details>
+
+        <details class="glass-panel rounded-2xl p-5 border border-white/10 group cursor-pointer">
+          <summary class="flex justify-between items-center text-sm font-bold text-white group-hover:text-gold list-none">
+            <span>How does the architect get paid?</span>
+            <span class="text-gold font-bold ml-2">+</span>
+          </summary>
+          <p class="text-xs text-gray-300 leading-relaxed mt-3 pt-3 border-t border-white/5">
+            Architects love Buildora because they are guaranteed payment! Once you approve the project budget, the architectural fees are locked into the milestone schedule. When the architect delivers schematic drawings, municipal approval drawings, and structural CAD packages, Buildora releases their funds automatically without client delays.
+          </p>
+        </details>
+
+        <details class="glass-panel rounded-2xl p-5 border border-white/10 group cursor-pointer">
+          <summary class="flex justify-between items-center text-sm font-bold text-white group-hover:text-gold list-none">
+            <span>Who actually constructs the house?</span>
+            <span class="text-gold font-bold ml-2">+</span>
+          </summary>
+          <p class="text-xs text-gray-300 leading-relaxed mt-3 pt-3 border-t border-white/5">
+            Buildora pairs the architect's designs with tier-1 chartered civil contractors vetted for financial stability, heavy machinery availability, and concrete quality certifications. Buildora oversees the contract execution until the day keys are handed over.
+          </p>
+        </details>
+
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="cost-calculator.html" class="btn-gold px-8 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider inline-block">
+          Test the Buildora Cost Calculator
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Universal Footer -->
+  <footer class="bg-charcoal-950 border-t border-gold/20 pt-16 pb-12 text-gray-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+        <div class="space-y-4">
+          <div class="flex items-center gap-3 justify-center sm:justify-start">
+            <div class="w-9 h-9 rounded-xl bg-gold flex items-center justify-center text-charcoal-950 font-bold">B</div>
+            <span class="font-serif text-xl font-bold text-white">BUILDORA</span>
+          </div>
+          <p class="text-xs text-gray-400">Eliminating financial risk from residential architecture and bespoke construction.</p>
+        </div>
+        <div>
+          <h4 class="text-xs font-semibold text-white uppercase tracking-widest mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="architects.html" class="hover:text-gold">Architects</a></li>
+            <li><a href="projects.html" class="hover:text-gold">Projects</a></li>
+            <li><a href="cost-calculator.html" class="hover:text-gold">Calculator</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-semibold text-white uppercase tracking-widest mb-4">Risk Shield</h4>
+          <ul class="space-y-2">
+            <li><a href="how-it-works.html" class="hover:text-gold">Escrow Policy</a></li>
+            <li><a href="about.html" class="hover:text-gold">QS Audit Standards</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-semibold text-white uppercase tracking-widest mb-4">Contact Risk Desk</h4>
+          <p class="text-xs text-gray-400">World Trade Center, Colombo 01.<br>Email: concierge@buildora.luxury</p>
+        </div>
+      </div>
+      <p class="pt-6 text-center text-[11px] text-gray-500">© 2026 Buildora Platform. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

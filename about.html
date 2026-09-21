@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Buildora | The Architectural Escrow Standard</title>
+  <meta name="description" content="Discover the philosophy behind Buildora: empowering homeowners and master architects with complete structural integrity and guaranteed budget safety.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              DEFAULT: '#C5A880',
+              hover: '#D8BD97',
+              dark: '#A68A62'
+            },
+            charcoal: {
+              900: '#0F1217',
+              950: '#0B0E14'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-charcoal-950 text-gray-200 bg-blueprint">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-gold to-gold-dark flex items-center justify-center shadow-lg group-hover:rotate-6 transition-transform">
+            <svg class="w-6 h-6 text-charcoal-950" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <div>
+            <span class="font-serif text-2xl font-bold tracking-wider text-white">BUILDORA</span>
+            <span class="block text-[9px] uppercase tracking-widest text-gold font-semibold">Architectural Escrow</span>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="index.html" data-nav="index.html" class="text-gray-300 hover:text-gold transition-colors">Home</a>
+          <a href="how-it-works.html" data-nav="how-it-works.html" class="text-gray-300 hover:text-gold transition-colors">How It Works</a>
+          <a href="architects.html" data-nav="architects.html" class="text-gray-300 hover:text-gold transition-colors">Architects</a>
+          <a href="projects.html" data-nav="projects.html" class="text-gray-300 hover:text-gold transition-colors">Designs & Portfolio</a>
+          <a href="cost-calculator.html" data-nav="cost-calculator.html" class="text-gray-300 hover:text-gold transition-colors">Budget Calculator</a>
+          <a href="about.html" data-nav="about.html" class="text-gold font-semibold">About</a>
+        </nav>
+
+        <div class="hidden lg:flex items-center gap-4">
+          <a href="post-project.html" class="btn-gold px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2">
+            <span>Commission Project</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </a>
+        </div>
+
+        <div class="md:hidden flex items-center gap-3">
+          <button id="mobile-menu-btn" class="p-2 text-gray-300 hover:text-white rounded-lg bg-white/5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-lg flex justify-end">
+    <div class="w-full max-w-sm bg-charcoal-900 h-full p-6 flex flex-col justify-between border-l border-gold/20">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-white/10">
+          <span class="font-serif text-xl font-bold text-white">BUILDORA</span>
+          <button id="close-mobile-menu" class="p-2 text-gray-400 hover:text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+        <nav class="flex flex-col gap-4 mt-6 text-base font-medium">
+          <a href="index.html" class="py-2 text-gray-300 hover:text-gold border-b border-white/5">Home</a>
+          <a href="how-it-works.html" class="py-2 text-gray-300 hover:text-gold border-b border-white/5">How It Works</a>
+          <a href="architects.html" class="py-2 text-gray-300 hover:text-gold border-b border-white/5">Architects</a>
+          <a href="projects.html" class="py-2 text-gray-300 hover:text-gold border-b border-white/5">Designs & Portfolio</a>
+          <a href="cost-calculator.html" class="py-2 text-gray-300 hover:text-gold border-b border-white/5">Budget Calculator</a>
+          <a href="about.html" class="py-2 text-gold border-b border-white/5">About</a>
+        </nav>
+      </div>
+      <a href="post-project.html" class="w-full btn-gold py-3 rounded-xl text-center text-xs font-bold uppercase tracking-wider block">
+        Start Your Project
+      </a>
+    </div>
+  </div>
+
+  <!-- Hero Header -->
+  <section class="py-20 relative border-b border-gold/15 bg-charcoal-900/50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="px-3.5 py-1 bg-gold/10 text-gold border border-gold/30 rounded-full text-xs font-semibold uppercase tracking-widest">
+        Our Philosophy
+      </span>
+      <h1 class="text-4xl sm:text-6xl font-serif font-bold text-white mt-4 mb-4">
+        Eliminating Risk So Architecture Can Flourish
+      </h1>
+      <p class="text-xs sm:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed font-light">
+        We founded Buildora on a singular premise: building an architectural masterwork should be one of life's greatest joys—not an unending financial nightmare of disputes and inflated bills.
+      </p>
+    </div>
+  </section>
+
+  <!-- Core Pillars -->
+  <section class="py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <div class="glass-panel p-8 rounded-3xl border border-gold/20 hover-lift">
+        <div class="w-12 h-12 rounded-xl bg-gold/10 border border-gold/30 text-gold flex items-center justify-center font-bold mb-6">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+        </div>
+        <h3 class="text-xl font-serif font-bold text-white mb-3">We Carry The Risk</h3>
+        <p class="text-xs text-gray-300 leading-relaxed">
+          In typical builds, homeowners take 100% of the financial burden if an architect fails or a contractor defaults. Buildora stands between both parties, guaranteeing completion and backing every single stage payment.
+        </p>
+      </div>
+
+      <div class="glass-panel p-8 rounded-3xl border border-gold/20 hover-lift">
+        <div class="w-12 h-12 rounded-xl bg-gold/10 border border-gold/30 text-gold flex items-center justify-center font-bold mb-6">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        </div>
+        <h3 class="text-xl font-serif font-bold text-white mb-3">Audited Cost Transparency</h3>
+        <p class="text-xs text-gray-300 leading-relaxed">
+          Architects design beauty; our chartered Quantity Surveyors price it realistically. You receive a mathematically proven budget before you commit a single rupee, completely eliminating mid-build surprises.
+        </p>
+      </div>
+
+      <div class="glass-panel p-8 rounded-3xl border border-gold/20 hover-lift">
+        <div class="w-12 h-12 rounded-xl bg-gold/10 border border-gold/30 text-gold flex items-center justify-center font-bold mb-6">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+        </div>
+        <h3 class="text-xl font-serif font-bold text-white mb-3">Pure Architectural Freedom</h3>
+        <p class="text-xs text-gray-300 leading-relaxed">
+          Architects are freed from billing disputes and chasing late payments. Homeowners are protected against inflated quotes. Both focus entirely on creating enduring living spaces.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Architect Registration Section -->
+  <section id="registration" class="py-20 bg-charcoal-900/60 border-t border-gold/15">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="glass-panel p-8 sm:p-12 rounded-3xl border border-gold/30 shadow-2xl">
+        <div class="text-center max-w-xl mx-auto mb-10">
+          <span class="text-xs uppercase tracking-widest text-gold font-semibold">Join The Atelier Network</span>
+          <h2 class="text-3xl font-serif font-bold text-white mt-2">Architect Application Portal</h2>
+          <p class="text-xs text-gray-300 mt-2">
+            Are you a chartered architect or registered spatial practice? Join Buildora to receive pre-qualified, serious clients with guaranteed milestone fee protection.
+          </p>
+        </div>
+
+        <form onsubmit="event.preventDefault(); showToast('Application Submitted', 'Your credentials have been submitted to the Buildora Chartered Review Board.', 'success'); this.reset();" class="space-y-4 text-xs">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-300 font-medium mb-1">Architect Full Name *</label>
+              <input type="text" required placeholder="Ar. Kusal Weerasinghe" class="w-full bg-black/60 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-gold outline-none">
+            </div>
+            <div>
+              <label class="block text-gray-300 font-medium mb-1">Studio / Firm Name *</label>
+              <input type="text" required placeholder="Studio Matrix Atelier" class="w-full bg-black/60 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-gold outline-none">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-300 font-medium mb-1">Professional Charter / SLIA / AIA Reg No. *</label>
+              <input type="text" required placeholder="e.g. SLIA-C-1849" class="w-full bg-black/60 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-gold outline-none">
+            </div>
+            <div>
+              <label class="block text-gray-300 font-medium mb-1">Years of Independent Practice</label>
+              <input type="number" placeholder="e.g. 10" class="w-full bg-black/60 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-gold outline-none">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-gray-300 font-medium mb-1">Primary Design Specialty *</label>
+              <select class="w-full bg-black/60 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-gold outline-none">
+                <option>Tropical Modernism & Courtyards</option>
+                <option>Modern Minimalist Concrete</option>
+                <option>Luxury Coastal & Cliffside Villas</option>
+                <option>Biophilic, Rammed Earth & Passive Solar</option>
+                <option>Colonial Heritage & Adaptive Reuse</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-gray-300 font-medium mb-1">Portfolio Link / Website</label>
+              <input type="url" placeholder="https://yourfirm.com" class="w-full bg-black/60 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-gold outline-none">
+            </div>
+          </div>
+
+          <div class="p-3 bg-black/40 rounded-xl border border-white/10 text-[11px] text-gray-400">
+            Buildora Verification Policy: We require verification of chartered standing, 3 completed residential case studies, and agreement to our Escrow Code of Conduct.
+          </div>
+
+          <button type="submit" class="w-full btn-gold py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-lg">
+            Submit Practitioner Application
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Universal Footer -->
+  <footer class="bg-charcoal-950 border-t border-gold/20 pt-16 pb-12 text-gray-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-gold flex items-center justify-center text-charcoal-950 font-bold">B</div>
+            <span class="font-serif text-xl font-bold text-white">BUILDORA</span>
+          </div>
+          <p class="text-xs text-gray-400">Eliminating financial risk from residential architecture and bespoke construction.</p>
+        </div>
+        <div>
+          <h4 class="text-xs font-semibold text-white uppercase tracking-widest mb-4">Platform</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-gold">Home</a></li>
+            <li><a href="architects.html" class="hover:text-gold">Architects</a></li>
+            <li><a href="cost-calculator.html" class="hover:text-gold">Calculator</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-semibold text-white uppercase tracking-widest mb-4">Integrity</h4>
+          <ul class="space-y-2">
+            <li><a href="how-it-works.html" class="hover:text-gold">Zero Risk Protocol</a></li>
+            <li><a href="how-it-works.html#escrow" class="hover:text-gold">Escrow Mechanics</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-semibold text-white uppercase tracking-widest mb-4">Headquarters</h4>
+          <p class="text-xs text-gray-400">Level 28, World Trade Center, Colombo 01.<br>Direct: +94 11 748 9000<br>Email: concierge@buildora.luxury</p>
+        </div>
+      </div>
+      <p class="pt-6 text-center text-[11px] text-gray-500">© 2026 Buildora Platform. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

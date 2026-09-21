@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architectural Portfolio & Designs | Buildora</title>
+  <meta name="description" content="Explore masterwork residential architecture designs, blueprints, and transparent audited construction cost breakdowns.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              DEFAULT: '#C5A880',
+              hover: '#D8BD97',
+              dark: '#A68A62'
+            },
+            charcoal: {
+              900: '#0F1217',
+              950: '#0B0E14'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-charcoal-950 text-gray-200 bg-blueprint">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-gold to-gold-dark flex items-center justify-center shadow-lg group-hover:rotate-6 transition-transform">
+            <svg class="w-6 h-6 text-charcoal-950" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <div>
+            <span class="font-serif text-2xl font-bold tracking-wider text-white">BUILDORA</span>
+            <span class="block text-[9px] uppercase tracking-widest text-gold font-semibold">Architectural Escrow</span>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="index.html" data-nav="index.html" class="text-gray-300 hover:text-gold transition-colors">Home</a>
+          <a href="how-it-works.html" data-nav="how-it-works.html" class="text-gray-300 hover:text-gold transition-colors">How It Works</a>
+          <a href="architects.html" data-nav="architects.html" class="text-gray-300 hover:text-gold transition-colors">Architects</a>
+          <a href="projects.html" data-nav="projects.html" class="text-gold font-semibold">Designs & Portfolio</a>
+          <a href="cost-calculator.html" data-nav="cost-calculator.html" class="text-gray-300 hover:text-gold transition-colors">Budget Calculator</a>
+          <a href="about.html" data-nav="about.html" class="text-gray-300 hover:text-gold transition-colors">About</a>
+        </nav>
+
+        <div class="hidden lg:flex items-center gap-4">
+          <a href="post-project.html" class="btn-gold px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2">
+            <span>Commission Project</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </a>
+        </div>
+
+        <div class="md:hidden flex items-center gap-3">
+          <button id="mobile-menu-btn" class="p-2 text-gray-300 hover:text-white rounded-lg bg-white/5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-lg flex justify-end">
+    <div class="w-full max-w-sm bg-charcoal-900 h-full p-6 flex flex-col justify-between border-l border-gold/20">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-white/10">
+          <span class="font-serif text-xl font-bold text-white">BUILDORA</span>
+          <button id="close-mobile-menu" class="p-2 text-gray-400 hover:text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+        <nav class="flex flex-col gap-4 mt-6 text-base font-medium">
+          <a href="index.html" class="py-2 text-gray-300 hover:text-gold border-b border-white/5">Home</a>
+          <a href="how-it-works.html" class="py-2 text-gray-300 hover:text-gold border-b border-white/5">How It Works</a>
+          <a href="architects.html" class="py-2 text-gray-300 hover:text-gold border-b border-white/5">Architects</a>
+          <a href="projects.html" class="py-2 text-gold border-b border-white/5">Designs & Portfolio</a>
+          <a href="cost-calculator.html" class="py-2 text-gray-300 hover:text-gold border-b border-white/5">Budget Calculator</a>
+          <a href="about.html" class="py-2 text-gray-300 hover:text-gold border-b border-white/5">About</a>
+        </nav>
+      </div>
+      <a href="post-project.html" class="w-full btn-gold py-3 rounded-xl text-center text-xs font-bold uppercase tracking-wider block">
+        Start Your Project
+      </a>
+    </div>
+  </div>
+
+  <!-- Hero Header -->
+  <section class="py-16 relative border-b border-gold/15 bg-charcoal-900/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="px-3.5 py-1 bg-gold/10 text-gold border border-gold/30 rounded-full text-xs font-semibold uppercase tracking-widest">
+        Architectural Gallery & Case Studies
+      </span>
+      <h1 class="text-3xl sm:text-5xl font-serif font-bold text-white mt-4 mb-4">
+        Masterwork Residential Portfolio
+      </h1>
+      <p class="text-xs sm:text-sm text-gray-300 max-w-2xl mx-auto leading-relaxed font-light mb-8">
+        Inspect real architectural elevations, material schedules, and Buildora certified construction costs delivered with 0% inflation.
+      </p>
+
+      <!-- Category Filter Pills -->
+      <div class="flex flex-wrap items-center justify-center gap-2">
+        <button data-proj-filter="All" class="px-4 py-2 rounded-xl text-xs font-semibold bg-gold text-black transition-all">All Masterworks</button>
+        <button data-proj-filter="Tropical Villa" class="px-4 py-2 rounded-xl text-xs bg-gray-800/60 text-gray-300 hover:text-white transition-all">Tropical Villas</button>
+        <button data-proj-filter="Minimalist Concrete" class="px-4 py-2 rounded-xl text-xs bg-gray-800/60 text-gray-300 hover:text-white transition-all">Minimalist Concrete</button>
+        <button data-proj-filter="Biophilic Eco-Home" class="px-4 py-2 rounded-xl text-xs bg-gray-800/60 text-gray-300 hover:text-white transition-all">Biophilic & Rammed Earth</button>
+        <button data-proj-filter="Luxury Estate" class="px-4 py-2 rounded-xl text-xs bg-gray-800/60 text-gray-300 hover:text-white transition-all">Luxury Multi-Level Estates</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Grid -->
+  <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Injected by js/projects.js -->
+    </div>
+  </section>
+
+  <!-- Project Details & Blueprint Modal -->
+  <div id="project-modal" class="hidden fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
+    <div class="glass-panel w-full max-w-5xl rounded-3xl p-6 sm:p-8 border border-gold/40 shadow-2xl relative my-8">
+      <button onclick="closeProjectModal()" class="absolute top-5 right-5 z-20 text-gray-400 hover:text-white bg-black/50 p-2 rounded-full">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+
+      <div id="project-modal-content">
+        <!-- Dynamically injected by projects.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Consultation Booking Modal -->
+  <div id="consultation-modal" class="hidden fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="glass-panel w-full max-w-lg rounded-3xl p-6 sm:p-8 border border-gold/40 shadow-2xl relative animate-slideIn">
+      <button onclick="closeConsultationModal()" class="absolute top-5 right-5 text-gray-400 hover:text-white">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+
+      <div class="mb-6">
+        <span class="px-2.5 py-1 bg-gold/10 text-gold border border-gold/30 rounded-md text-[10px] font-bold uppercase tracking-wider">Free Concept Ideation</span>
+        <h3 class="text-2xl font-serif font-bold text-white mt-2">Connect With <span id="consultation-architect-name" class="text-gold">Lead Architect</span></h3>
+        <p class="text-xs text-gray-400 mt-1">Discuss floor plan ideas, spatial layout, and land specs. No direct fees or obligations.</p>
+      </div>
+
+      <form onsubmit="submitConsultation(event)" class="space-y-4 text-xs">
+        <div>
+          <label class="block text-gray-300 font-medium mb-1">Your Full Name *</label>
+          <input type="text" name="client_name" required placeholder="e.g. Ruwan Wickramasinghe" class="w-full bg-black/60 border border-white/10 rounded-xl px-3.5 py-2.5 text-white focus:border-gold outline-none">
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-gray-300 font-medium mb-1">Phone / WhatsApp *</label>
+            <input type="tel" name="client_phone" required placeholder="+94 77 123 4567" class="w-full bg-black/60 border border-white/10 rounded-xl px-3.5 py-2.5 text-white focus:border-gold outline-none">
+          </div>
+          <div>
+            <label class="block text-gray-300 font-medium mb-1">Land / Plot Area</label>
+            <input type="text" name="land_area" placeholder="e.g. 15 Perches / 4,000 sqft" class="w-full bg-black/60 border border-white/10 rounded-xl px-3.5 py-2.5 text-white focus:border-gold outline-none">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-gray-300 font-medium mb-1">Email Address</label>
+          <input type="email" name="client_email" placeholder="you@domain.com" class="w-full bg-black/60 border border-white/10 rounded-xl px-3.5 py-2.5 text-white focus:border-gold outline-none">
+        </div>
+
+        <div>
+          <label class="block text-gray-300 font-medium mb-1">Your Project Vision / Notes</label>
+          <textarea name="client_note" rows="3" placeholder="Tell the architect what you'd love (e.g. courtyard with water body, minimalist concrete, 3 bedrooms)..." class="w-full bg-black/60 border border-white/10 rounded-xl px-3.5 py-2.5 text-white focus:border-gold outline-none"></textarea>
+        </div>
+
+        <div class="p-3 bg-emerald-500/10 border border-emerald-500/25 rounded-xl text-[11px] text-emerald-400 flex items-center gap-2">
+          <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+          Buildora Rule: Architect cannot request design advances directly. Buildora provides official quote.
+        </div>
+
+        <button type="submit" class="w-full btn-gold py-3 rounded-xl text-xs font-bold uppercase tracking-wider shadow-lg">
+          Schedule Free Concept Session
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Universal Footer -->
+  <footer class="bg-charcoal-950 border-t border-gold/20 pt-16 pb-12 text-gray-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-gold flex items-center justify-center text-charcoal-950 font-bold">B</div>
+            <span class="font-serif text-xl font-bold text-white">BUILDORA</span>
+          </div>
+          <p class="text-xs text-gray-400">Eliminating financial risk from residential architecture and bespoke construction.</p>
+        </div>
+        <div>
+          <h4 class="text-xs font-semibold text-white uppercase tracking-widest mb-4">Explore</h4>
+          <ul class="space-y-2">
+            <li><a href="architects.html" class="hover:text-gold">Architects</a></li>
+            <li><a href="cost-calculator.html" class="hover:text-gold">Calculator</a></li>
+            <li><a href="how-it-works.html" class="hover:text-gold">How It Works</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-semibold text-white uppercase tracking-widest mb-4">Safe Shield</h4>
+          <ul class="space-y-2">
+            <li><a href="how-it-works.html#escrow" class="hover:text-gold">Milestone Escrow</a></li>
+            <li><a href="how-it-works.html#audit" class="hover:text-gold">Chartered QS Audit</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-semibold text-white uppercase tracking-widest mb-4">Risk Concierge</h4>
+          <p class="text-xs text-gray-400">Level 28, World Trade Center, Colombo 01.<br>Email: concierge@buildora.luxury</p>
+        </div>
+      </div>
+      <p class="pt-6 text-center text-[11px] text-gray-500">© 2026 Buildora Platform. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/projects.js"></script>
+</body>
+</html>
